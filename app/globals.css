@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Muted Purple Palette */
+  --color-brand-purple: #4A1B4F;
+  --color-brand-purple-dark: #331137;
+  --color-brand-purple-deep: #240A28;
+  --color-brand-purple-medium: #6E2D75;
+  --color-brand-purple-light: #904797;
+  --color-brand-purple-subtle: #F7EFF8;
+
+  /* Muted Pink & Dusty Rose Palette */
+  --color-brand-pink: #C26E92;
+  --color-brand-pink-dark: #A54F74;
+  --color-brand-pink-light: #ECC5D6;
+  --color-brand-pink-subtle: #FDF4F8;
+  --color-brand-pink-border: #E5CDDB;
+
+  /* Surface & Text */
+  --color-brand-canvas: #FAF6F9;
+  --color-brand-card: #FFFFFF;
+  --color-brand-sand: #FAF6F9;
+  --color-brand-charcoal: #221725;
+  --color-brand-muted: #6B596F;
+  --color-brand-subtle: #968399;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  background-color: #FAF6F9;
+  color: #221725;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Minimalist Glow Utilities */
+.glow-pink-sm {
+  box-shadow: 0 0 20px rgba(194, 110, 146, 0.18);
+}
+
+.glow-pink-md {
+  box-shadow: 0 0 35px rgba(194, 110, 146, 0.22);
+}
+
+.glow-purple-sm {
+  box-shadow: 0 0 25px rgba(74, 27, 79, 0.15);
+}
+
+.glow-card {
+  box-shadow: 0 8px 32px -4px rgba(74, 27, 79, 0.05), 0 0 20px 0 rgba(194, 110, 146, 0.08);
+}
+
+.ambient-glow-top {
+  background: radial-gradient(circle at 50% 0%, rgba(236, 197, 214, 0.25) 0%, rgba(250, 246, 249, 0) 70%);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 205, 219, 0.8);
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
