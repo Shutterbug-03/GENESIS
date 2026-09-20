@@ -69,6 +69,13 @@ export const metadata: Metadata = {
       "45+ years of continuous clinical expertise in obstetrics, gynecology, and fertility care by Dr. Uma Sheshgiri in Bengaluru.",
     images: ["/images/genesis_distinction_sanctuary.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
