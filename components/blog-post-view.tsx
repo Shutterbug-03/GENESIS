@@ -307,7 +307,7 @@ export function BlogPostView({ post, relatedPosts }: BlogPostViewProps) {
                       {post.author.title}
                     </p>
                     <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
-                      {post.author.qualifications}. {post.author.experience}. Trained at Bangalore Medical College and Kiel University (Germany), she brings gentle, humanized obstetrics, natural delivery guidance, and conservative fertility care to women in Bengaluru.
+                      {post.author.qualifications}. {post.author.experience}. Trained at M.R. Medical College, Bangalore Medical College, and Germany (Certified Diploma in ART), she brings gentle, humanized obstetrics, natural delivery guidance, and conservative fertility care to women in Bengaluru.
                     </p>
                   </div>
                 </div>

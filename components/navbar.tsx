@@ -178,11 +178,11 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
                     <p className="text-xs font-serif font-medium text-white truncate">Dr. Uma Sheshgiri</p>
-                    <span className="text-[10px] text-[#FAD6E7] font-semibold">MD, DGO</span>
+                    <span className="text-[10px] text-[#FAD6E7] font-semibold">MBBS, DGO, MD (OBG)</span>
                   </div>
                   <p className="text-[10px] text-[#FAD6E7]/80 flex items-center gap-1 mt-0.5">
                     <Award className="h-3 w-3 shrink-0 text-brand-pink" />
-                    <span className="truncate">40+ Yrs Clinical Practice • New BEL Rd</span>
+                    <span className="truncate">45+ Yrs Practice • Chairman, IMA-AMS</span>
                   </p>
                 </div>
               </div>

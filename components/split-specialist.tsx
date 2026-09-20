@@ -11,12 +11,12 @@ interface SplitSpecialistProps {
 
 export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
   const areasOfCare = [
-    "Gynecology consultations",
-    "Antenatal & obstetric care",
-    "Fertility support",
-    "Preventive screening",
-    "Menopause care",
-    "Family planning",
+    "Women's health & wellbeing",
+    "Obstetrics & gynaecology",
+    "Maternal healthcare & delivery",
+    "Preventive healthcare & screening",
+    "Fertility & ART support",
+    "Menopause & midlife care",
   ]
 
   return (
@@ -38,7 +38,7 @@ export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
 
               <div className="space-y-4 text-sm sm:text-base lg:text-lg text-brand-muted font-light leading-relaxed">
                 <p>
-                  Genesis grew out of Dr. Uma Sheshgiri&apos;s four decades close to women&apos;s
+                  Genesis grew out of Dr. Uma Sheshgiri&apos;s 45+ years close to women&apos;s
                   health — the belief that caring for women demands individual attention,
                   sensitivity and trust, especially in life&apos;s most delicate and
                   transformative moments.
@@ -79,7 +79,7 @@ export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
                 <div className="group/photo relative h-36 w-32 min-w-32 min-h-36 sm:h-44 sm:w-36 sm:min-w-36 sm:min-h-44 shrink-0 overflow-hidden rounded-2xl border-2 border-brand-pink-border hover:border-brand-purple/50 shadow-xs transition-colors duration-300">
                   <Image
                     src="/images/dr_uma_clinic.jpg"
-                    alt="Dr. Uma Sheshgiri, Senior Gynecologist & Obstetrician"
+                    alt="Dr. Uma Sheshgiri, Senior Obstetrician & Gynaecologist"
                     fill
                     sizes="(max-width: 768px) 130px, 160px"
                     className="object-cover object-top transition-transform duration-500 ease-out group-hover/photo:scale-105"
@@ -93,14 +93,12 @@ export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
                     </h3>
                     <p className="text-xs font-medium text-brand-purple flex items-center justify-center sm:justify-start gap-1.5 mt-0.5">
                       <Award className="h-3.5 w-3.5 text-brand-pink-dark" />
-                      Gynecology &amp; Obstetrics — MD, DGO
+                      MBBS, DGO, MD (OBG) • Chairman, IMA-AMS
                     </p>
                   </div>
 
                   <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
-                    Over 40 years guiding women through every stage of health — from
-                    menstrual care to high-risk pregnancy, fertility support and menopause
-                    — with an approach rooted in listening, warmth and clinical precision.
+                    Senior Obstetrician &amp; Gynaecologist with 45+ years of clinical experience, including 15 years Karnataka Government healthcare service (Retired Superintendent, K.R. Puram General Hospital). Dedicated to compassionate, individualized maternal and gynecological care.
                   </p>
                 </div>
               </div>
@@ -108,7 +106,7 @@ export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
               {/* Areas of Care */}
               <div className="pt-2 border-t border-brand-pink-border/25">
                 <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-charcoal mb-2.5">
-                  Areas of Care
+                  Areas of Care &amp; Focus
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
                   {areasOfCare.map((area, idx) => (
@@ -125,7 +123,7 @@ export function SplitSpecialist({ onOpenBooking }: SplitSpecialistProps) {
             </div>
 
             <div className="pt-5 border-t border-brand-pink-border/25 mt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-brand-muted text-center sm:text-left">
-              <span>Bengaluru Practice • New BEL Road</span>
+              <span>Chairman, IMA-AMS Bangalore Chapter • New BEL Road</span>
               <a href="tel:+919900098736" className="font-medium text-brand-purple hover:underline hover:text-brand-purple-dark transition-colors">
                 Tel: +91 99000 98736
               </a>

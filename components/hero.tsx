@@ -47,7 +47,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
               </p>
               
               <p className="hidden sm:block text-xs sm:text-sm text-white/70 max-w-lg leading-relaxed font-light">
-                Backed by over 40 years of continuous clinical presence on New BEL Road,
+                Backed by over 45 years of continuous clinical practice on New BEL Road,
                 providing an unhurried sanctuary where generations of mothers and daughters
                 receive thoughtful, personalized care.
               </p>
@@ -76,21 +76,21 @@ export function Hero({ onOpenBooking }: HeroProps) {
             <div className="block lg:hidden pt-2">
               <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full overflow-hidden rounded-[2rem] shadow-[0_25px_65px_rgba(15,2,18,0.7)] border border-white/25 bg-[#250629]/50 group">
                 <Image
-                  src="/images/genesis_hero_doctors.jpg"
+                  src="/images/genesis_hero_care_team.jpg"
                   alt="Dr. Uma Sheshgiri and specialist doctors at Genesis"
                   fill
                   sizes="(max-width: 1024px) 100vw, 600px"
                   priority
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent via-55% to-transparent pointer-events-none" />
                 <div className="absolute bottom-3 inset-x-3 py-2 px-3.5 rounded-xl bg-[#1C0420]/80 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
                   <div className="min-w-0 pr-2">
                     <p className="font-serif text-xs font-medium text-white truncate">
-                      Dr. Uma Sheshgiri, MD, DGO &amp; Specialists
+                      Dr. Uma Sheshgiri & Clinical Team
                     </p>
                     <p className="text-[9px] tracking-wider uppercase text-[#FAD6E7]/90 mt-0.5">
-                      40+ Years Continuous Practice • Est. 1984
+                      45+ Years Experience • Chairman, IMA-AMS
                     </p>
                   </div>
                   <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/15 text-[#FAD6E7] shrink-0">
@@ -105,7 +105,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
               <div className="inline-flex items-center gap-3.5 sm:gap-6 px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl bg-white/[0.08] backdrop-blur-md border border-white/15 text-white w-fit shadow-sm">
                 <div className="text-left">
                   <p className="font-serif text-xl sm:text-2xl lg:text-3xl font-light tracking-tight text-[#FCE1EE]">
-                    40+
+                    45+
                   </p>
                   <p className="text-[9px] sm:text-[11px] text-white/70 uppercase tracking-[0.14em] font-medium whitespace-nowrap">
                     Years Trust
@@ -148,12 +148,12 @@ export function Hero({ onOpenBooking }: HeroProps) {
               {/* Main Photo Frame */}
               <div className="relative aspect-[4/3] sm:aspect-[16/12] w-full overflow-hidden rounded-[2rem] sm:rounded-[3.25rem] shadow-[0_35px_80px_-20px_rgba(20,4,25,0.7)] hover:shadow-[0_40px_90px_-15px_rgba(20,4,25,0.85)] border border-white/30 hover:border-white/45 bg-[#250629]/40 group transition-all duration-500">
                 <Image
-                  src="/images/genesis_hero_doctors.jpg"
-                  alt="Dr. Uma Sheshgiri and specialist doctors at Genesis"
+                  src="/images/genesis_hero_care_team.jpg"
+                  alt="Dr. Uma Sheshgiri and clinical specialist team at Genesis"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   priority
-                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
 
                 {/* Subtle soft dark gradient at base for legibility */}
@@ -163,10 +163,10 @@ export function Hero({ onOpenBooking }: HeroProps) {
                 <div className="absolute bottom-3 inset-x-3 sm:bottom-5 sm:inset-x-5 py-2.5 sm:py-3.5 px-3.5 sm:px-5 rounded-xl sm:rounded-2xl bg-[#1C0420]/80 group-hover:bg-[#1C0420]/90 backdrop-blur-md border border-white/15 group-hover:border-white/25 text-white flex items-center justify-between transition-all duration-300">
                   <div className="min-w-0 pr-2">
                     <p className="font-serif text-xs sm:text-base font-medium text-white group-hover:text-[#FDF2F8] transition-colors truncate">
-                      Dr. Uma Sheshgiri, MD, DGO &amp; Specialists
+                      Dr. Uma Sheshgiri & Clinical Team
                     </p>
                     <p className="text-[9px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.18em] uppercase text-[#FAD6E7]/90 mt-0.5 truncate">
-                      New BEL Road, Bengaluru
+                      45+ Years Clinical Practice • New BEL Road
                     </p>
                   </div>
                   <span className="hidden sm:inline-block text-[11px] font-medium px-3 py-1 rounded-full bg-white/10 text-[#FAD6E7] border border-white/15 group-hover:bg-white/15 transition-all shrink-0">

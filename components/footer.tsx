@@ -15,7 +15,7 @@ export function Footer() {
             
             <p className="text-sm text-brand-muted max-w-sm font-light leading-relaxed pt-1">
               Genesis Women&apos;s Health &amp; Infertility Center — gynecology,
-              obstetrics and fertility care led by Dr. Uma Sheshgiri, MD, DGO.
+              obstetrics and fertility care led by Dr. Uma Sheshgiri, MBBS, DGO, MD (OBG).
             </p>
 
             <div className="pt-2">
@@ -90,12 +90,12 @@ export function Footer() {
 
               <li>
                 <a
-                  href="mailto:umasheshgiri.c@gmail.com"
+                  href="mailto:umasheshgiri@gmail.com"
                   className="flex items-center gap-3 hover:text-brand-purple transition-colors group"
                 >
                   <Mail className="h-4 w-4 text-brand-pink-dark shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="text-brand-charcoal group-hover:text-brand-purple">
-                    umasheshgiri.c@gmail.com
+                    umasheshgiri@gmail.com
                   </span>
                 </a>
               </li>
@@ -110,7 +110,7 @@ export function Footer() {
             &copy; 2026 Genesis Women&apos;s Health &amp; Infertility Center. New BEL Road, Bengaluru, Karnataka
           </div>
           <div className="flex items-center gap-2 text-brand-purple font-medium">
-            <span>Dr. Uma Sheshgiri, MD, DGO</span>
+            <span>Dr. Uma Sheshgiri, MBBS, DGO, MD (OBG) • Chairman, IMA-AMS</span>
           </div>
         </div>
       </div>

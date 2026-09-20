@@ -16,6 +16,11 @@ import {
   Award,
   CheckCircle2,
   ArrowUpRight,
+  Building2,
+  ShieldCheck,
+  Stethoscope,
+  Users2,
+  Quote,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -24,36 +29,36 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      phase: "PHASE 01 • GULBARGA",
+      phase: "PHASE 01 • 1978",
       title: "Medical Foundation",
-      degree: "MBBS — MRMC Medical College, Gulbarga",
+      degree: "MBBS — M.R. Medical College, Gulbarga",
       description:
-        "Rigorous clinical immersion laying the lifelong grounding in patient empathy and surgical fundamentals.",
-      badge: "Class Honors & Distinction",
+        "Comprehensive undergraduate clinical immersion establishing lifelong dedication to patient empathy, surgical discipline, and clinical ethics.",
+      badge: "Graduated 1978",
     },
     {
-      phase: "PHASE 02 • BENGALURU",
-      title: "Specialization",
-      degree: "MD, Obstetrics & Gynaecology — Bangalore Medical College (BMC)",
+      phase: "PHASE 02 • 1982",
+      title: "Postgraduate Diploma",
+      degree: "DGO (Obstetrics & Gynaecology) — M.R. Medical College, Gulbarga",
       description:
-        "Intensive training in high-risk pregnancy protocols, complex obstetric emergencies, and operative gynecology.",
-      badge: "Tertiary Obstetrics Mastery",
+        "Specialized postgraduate training in Obstetrics and Gynaecology, mastering antenatal protocols, maternal care, and labor ward management.",
+      badge: "Specialized 1982",
     },
     {
-      phase: "PHASE 03 • GERMANY",
-      title: "International Training",
-      degree: "Artificial Reproductive Techniques (ART) — Kiel University, Frankfurt",
+      phase: "PHASE 03 • 1998",
+      title: "Doctor of Medicine (MD)",
+      degree: "MD (Obstetrics & Gynaecology) — Bangalore Medical College",
       description:
-        "Advanced reproductive medicine and fertility care modalities brought back to establish evidence-led protocols in Bengaluru.",
-      badge: "Global ART Fellowship",
+        "Advanced tertiary mastery at Karnataka's apex medical academy, managing high-risk pregnancies, obstetric emergencies, and complex gynecological surgeries.",
+      badge: "BMC Alumna • 1998",
     },
     {
-      phase: "PHASE 04 • NEW BEL ROAD",
-      title: "Four Decades in Practice",
-      degree: "Thousands of deliveries, generations of families",
+      phase: "PHASE 04 • 2015",
+      title: "Certified International Fellowship",
+      degree: "Certified Diploma in ART — Germany",
       description:
-        "40+ years of continuous practice in gynecology, obstetrics and infertility care in Bengaluru, welcoming second-generation mothers.",
-      badge: "Over 40 Years of Service",
+        "Advanced training in Assisted Reproductive Techniques (ART), integrating European evidence-based fertility protocols with patient-sparing conservative ethics.",
+      badge: "Germany Certified • 2015",
     },
   ]
 
@@ -160,7 +165,7 @@ export default function AboutPage() {
                           Generational Continuity
                         </h4>
                         <p className="text-xs text-white/70 font-light mt-0.5 leading-relaxed">
-                          Babies Dr. Uma delivered four decades ago now return to embark on their own parenthood.
+                          Babies Dr. Uma delivered over 45 years ago now return to embark on their own parenthood.
                         </p>
                       </div>
                     </div>
@@ -183,7 +188,7 @@ export default function AboutPage() {
                 Physician Profile &amp; Clinical Leadership
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-charcoal">
-                Compassion Rooted in 40+ Years of Mastery
+                Compassion Rooted in 45+ Years of Mastery
               </h2>
             </div>
 
@@ -195,7 +200,7 @@ export default function AboutPage() {
                   <div className="relative aspect-[3/4] w-full max-w-sm rounded-[2.5rem] overflow-hidden border-4 border-white shadow-lg glow-pink-sm">
                     <Image
                       src="/images/dr_uma_clinic.jpg"
-                      alt="Dr. Uma Sheshgiri, Senior Gynecologist & Infertility Specialist"
+                      alt="Dr. Uma Sheshgiri, Senior Obstetrician & Gynaecologist"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover object-top"
@@ -203,7 +208,7 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-purple-deep/40 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 text-center py-2 px-3 rounded-full bg-white/95 backdrop-blur-xs text-xs font-semibold text-brand-purple shadow-xs border border-brand-pink-border">
-                      Senior Gynecologist &amp; Fertility Specialist
+                      Chairman, IMA-AMS Bangalore Chapter
                     </div>
                   </div>
                 </div>
@@ -212,38 +217,37 @@ export default function AboutPage() {
                 <div className="lg:col-span-7 space-y-6">
                   <div className="space-y-1.5">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink-subtle border border-brand-pink-border text-xs font-semibold text-brand-purple">
-                      Senior Consultant &amp; Medical Director
+                      Senior Obstetrician &amp; Gynaecologist
                     </span>
                     <h3 className="font-serif text-3xl sm:text-4xl font-medium text-brand-charcoal pt-1">
-                      Dr. Uma Sheshgiri, <span className="text-xl font-normal text-brand-muted">MD, DGO</span>
+                      Dr. Uma Sheshgiri, <span className="text-xl font-normal text-brand-muted">MBBS, DGO, MD (OBG)</span>
                     </h3>
                     <p className="text-sm font-medium text-brand-pink-dark">
-                      40+ years in gynecology, obstetrics &amp; infertility care
+                      45+ years of clinical experience • 15 years Govt of Karnataka service
                     </p>
                   </div>
 
                   <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
-                    Dr. Uma Sheshgiri has spent more than four decades managing normal and
-                    high-risk deliveries, and guiding women through menstrual health, fertility
-                    questions and menopause. She trained in Artificial Reproductive Techniques at
-                    Kiel University in Frankfurt, Germany, and is known — as much as for her
-                    clinical precision — for a calm, patient-first way of explaining what&apos;s
-                    happening and what comes next.
+                    Senior Obstetrician &amp; Gynaecologist with 45+ years of clinical experience, including 15 years of distinguished service with the Government of Karnataka. Experienced in public-sector healthcare, women&apos;s health, clinical leadership, and professional medical organisations. Served as Superintendent of K.R. Puram General Hospital and held prominent leadership positions in the Indian Medical Association (IMA). Currently serving as Chairman, IMA Academy of Medical Specialties (IMA-AMS), Bangalore Chapter.
                   </p>
 
-                  {/* 3 Stat Chips */}
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
-                    <div className="p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
-                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">12,000+</p>
-                      <p className="text-[9px] min-[380px]:text-[10px] sm:text-xs text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Safe Deliveries</p>
+                  {/* 4 Stat Chips in a clean responsive grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-2">
+                    <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
+                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">45+</p>
+                      <p className="text-[9px] sm:text-[10px] text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Yrs Experience</p>
                     </div>
-                    <div className="p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
-                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">40+</p>
-                      <p className="text-[9px] min-[380px]:text-[10px] sm:text-xs text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Years Dedication</p>
+                    <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
+                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">15 Yrs</p>
+                      <p className="text-[9px] sm:text-[10px] text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Govt Service</p>
                     </div>
-                    <div className="p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
-                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">Kiel ART</p>
-                      <p className="text-[9px] min-[380px]:text-[10px] sm:text-xs text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Germany Fellow</p>
+                    <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
+                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">Chairman</p>
+                      <p className="text-[9px] sm:text-[10px] text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">IMA-AMS Blr</p>
+                    </div>
+                    <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-brand-pink-subtle/70 border border-brand-pink-border text-center">
+                      <p className="font-serif text-lg sm:text-2xl font-semibold text-brand-purple">ART Dip.</p>
+                      <p className="text-[9px] sm:text-[10px] text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">Germany 2015</p>
                     </div>
                   </div>
 
@@ -331,6 +335,314 @@ export default function AboutPage() {
                   )
                 })}
               </div>
+            </div>
+          </section>
+
+          {/* Section: Public Service, Leadership & Accreditations (from updated CV) */}
+          <section className="space-y-12">
+            <div className="text-center space-y-2">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-pink-dark">
+                Public Service &amp; Professional Governance
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-charcoal">
+                A Distinguished Record of Healthcare Leadership
+              </h2>
+              <p className="text-sm text-brand-muted font-light max-w-2xl mx-auto">
+                Combining 15 years of public-sector hospital governance with prominent leadership roles across state and national medical associations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              
+              {/* Card 1: 15 Years Government Service */}
+              <div className="rounded-3xl bg-white border border-brand-pink-border p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-5">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink-subtle border border-brand-pink-border text-xs font-semibold text-brand-purple">
+                      <Building2 className="h-3.5 w-3.5 text-brand-pink-dark" />
+                      15 Years Government Service
+                    </span>
+                    <span className="text-xs font-mono font-medium text-brand-muted">Karnataka</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-2xl font-medium text-brand-charcoal">
+                      Retired Superintendent, K.R. Puram General Hospital
+                    </h3>
+                    <p className="text-xs font-medium text-brand-purple mt-1">
+                      Government of Karnataka • Public Healthcare Administration
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                    Served the Government of Karnataka in various capacities for 15 years. Led as Superintendent of K.R. Puram General Hospital, directing clinical maternity protocols, community healthcare initiatives, and hospital administrative operations.
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-brand-pink-border/50">
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span>Extensive public-sector clinical care &amp; maternal health delivery</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span>Superintendent leadership over multidisciplinary medical teams</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span>Dedicated community-oriented healthcare &amp; preventive health drives</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: IMA Leadership & Medical Governance */}
+              <div className="rounded-3xl bg-white border border-brand-pink-border p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-5">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink-subtle border border-brand-pink-border text-xs font-semibold text-brand-purple">
+                      <ShieldCheck className="h-3.5 w-3.5 text-brand-pink-dark" />
+                      Medical Association Leadership
+                    </span>
+                    <span className="text-xs font-mono font-medium text-brand-muted">IMA Leadership</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-2xl font-medium text-brand-charcoal">
+                      Chairman, IMA-AMS Bangalore Chapter
+                    </h3>
+                    <p className="text-xs font-medium text-brand-purple mt-1">
+                      Indian Medical Association Academy of Medical Specialties
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                    A cornerstone of professional medical governance in Bengaluru, serving continuously in executive leadership roles within the Indian Medical Association since 2001.
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-brand-pink-border/50">
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>Chairman</strong>, IMA Academy of Medical Specialties (IMA-AMS), Bangalore Chapter — Current</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>President</strong>, IMA Bangalore Branch (2013–2015)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>Honorary Secretary</strong>, IMA Bangalore Branch (2003–2004)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>Senior Vice President</strong>, IMA Karnataka State &bull; Executive Committee from 2001</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Awards & Recognition */}
+              <div className="rounded-3xl bg-white border border-brand-pink-border p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-5">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink-subtle border border-brand-pink-border text-xs font-semibold text-brand-purple">
+                      <Award className="h-3.5 w-3.5 text-brand-pink-dark" />
+                      Honors &amp; Recognition
+                    </span>
+                    <span className="text-xs font-mono font-medium text-brand-muted">National &amp; State</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-2xl font-medium text-brand-charcoal">
+                      State &amp; National Medical Honors
+                    </h3>
+                    <p className="text-xs font-medium text-brand-purple mt-1">
+                      Awarded for scientific sessions &amp; medical community development
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                    Honored by premier medical authorities for outstanding institutional leadership, academic session curation, and expanding the medical fraternity.
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-brand-pink-border/50">
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>Best Branch Award</strong> — IMA Karnataka State (2013)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>National Award for Best Scientific Session</strong> (2013)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>National Award for Maximum Member Installations</strong>, IMA Bangalore Branch (2015)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4: Professional Memberships */}
+              <div className="rounded-3xl bg-white border border-brand-pink-border p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-5">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-pink-subtle border border-brand-pink-border text-xs font-semibold text-brand-purple">
+                      <Users2 className="h-3.5 w-3.5 text-brand-pink-dark" />
+                      Professional Fellowships
+                    </span>
+                    <span className="text-xs font-mono font-medium text-brand-muted">Apex Societies</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-2xl font-medium text-brand-charcoal">
+                      Life Memberships &amp; Affiliations
+                    </h3>
+                    <p className="text-xs font-medium text-brand-purple mt-1">
+                      Active participant in India&apos;s leading obstetric and medical societies
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                    Committed to advancing clinical guidelines, continuing medical education, and ethical healthcare through active life memberships in prestigious councils.
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-brand-pink-border/50">
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>BSOG</strong>: Life Member, Bangalore Society of Obstetrics &amp; Gynaecology</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>FOGSI</strong>: Life Member, Federation of Obstetric and Gynaecological Societies of India</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>IMA</strong>: Life Member, Indian Medical Association</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-brand-charcoal">
+                      <CheckCircle2 className="h-4 w-4 text-brand-pink-dark shrink-0 mt-0.5" />
+                      <span><strong>IMA-AMS</strong>: Life Member, IMA Academy of Medical Specialties</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Section: Leadership Philosophy Quote */}
+          <section>
+            {/* Elegant Quote Banner */}
+            <div className="rounded-3xl sm:rounded-4xl bg-gradient-to-br from-[#250629] via-[#3D0F40] to-[#5C1A58] text-white p-8 sm:p-12 shadow-md relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse,rgba(242,201,220,0.15)_0%,transparent_70%)] blur-2xl pointer-events-none" />
+              
+              <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
+                <Quote className="h-8 w-8 text-[#FAD6E7] mx-auto opacity-80" />
+                <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#FCE1EE] font-light italic leading-relaxed">
+                  &ldquo;Committed to women&apos;s health, compassionate clinical care and meaningful medical leadership.&rdquo;
+                </p>
+                <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed max-w-2xl mx-auto pt-2">
+                  Dr. Uma Sheshgiri has combined long-standing clinical practice in Obstetrics &amp; Gynaecology with public-sector service and leadership in the medical profession. Her experience spans hospital administration, women&apos;s healthcare, professional association leadership, scientific and educational activities, and community-oriented healthcare.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Section: Current Clinical Practice & Hospital Network */}
+          <section className="space-y-8">
+            <div className="text-center space-y-2">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-pink-dark">
+                Clinical Practice Network
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-brand-charcoal">
+                Where Dr. Uma Sheshgiri Consults &amp; Operates
+              </h2>
+              <p className="text-sm text-brand-muted font-light max-w-2xl mx-auto">
+                Consultations and outpatient diagnostics at our peaceful New BEL Road sanctuary, with admitting and delivery privileges at Bengaluru&apos;s leading tertiary centers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              
+              <div className="rounded-3xl bg-gradient-to-br from-[#F9EDF5] to-[#F3E3EF] p-6 border border-brand-pink-border shadow-xs flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-brand-purple bg-white/70 px-2.5 py-1 rounded-full inline-block border border-brand-pink-border">
+                    Primary Outpatient Sanctuary
+                  </span>
+                  <h3 className="font-serif text-xl font-medium text-brand-charcoal">
+                    VCUS Health Centre / Genesis
+                  </h3>
+                  <p className="text-xs text-brand-purple font-medium">
+                    New BEL Road, Bengaluru
+                  </p>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed pt-1">
+                    Consultant in Obstetrics &amp; Gynaecology. Dedicated sanctuary for unhurried 30-minute consultations, antenatal check-ups, diagnostics &amp; fertility evaluations.
+                  </p>
+                </div>
+                <div className="text-[11px] text-brand-pink-dark font-medium pt-2 border-t border-brand-pink-border/50">
+                  Daily Outpatient Consultations
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white p-6 border border-brand-pink-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-brand-purple bg-brand-pink-subtle px-2.5 py-1 rounded-full inline-block border border-brand-pink-border">
+                    Maternity &amp; Inpatient Privileges
+                  </span>
+                  <h3 className="font-serif text-xl font-medium text-brand-charcoal">
+                    Cloudnine Hospital
+                  </h3>
+                  <p className="text-xs text-brand-purple font-medium">
+                    Malleswaram, Bengaluru
+                  </p>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed pt-1">
+                    Consultant in Obstetrics &amp; Gynaecology. Admitting consultant for natural deliveries, cesarean births, and neonatal backup with Level-3 NICU infrastructure.
+                  </p>
+                </div>
+                <div className="text-[11px] text-brand-pink-dark font-medium pt-2 border-t border-brand-pink-border/50">
+                  Admitting &amp; Delivery Privileges
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white p-6 border border-brand-pink-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-brand-purple bg-brand-pink-subtle px-2.5 py-1 rounded-full inline-block border border-brand-pink-border">
+                    Specialized Inpatient Care
+                  </span>
+                  <h3 className="font-serif text-xl font-medium text-brand-charcoal">
+                    Milan Hospital
+                  </h3>
+                  <p className="text-xs text-brand-purple font-medium">
+                    Kumara Park West, Bengaluru
+                  </p>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed pt-1">
+                    Consultant in Obstetrics &amp; Gynaecology. Comprehensive reproductive medicine facilities, specialized maternity suites, and operative procedures.
+                  </p>
+                </div>
+                <div className="text-[11px] text-brand-pink-dark font-medium pt-2 border-t border-brand-pink-border/50">
+                  Consultant &amp; Surgical Privileges
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white p-6 border border-brand-pink-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-brand-purple bg-brand-pink-subtle px-2.5 py-1 rounded-full inline-block border border-brand-pink-border">
+                    Multidisciplinary Tertiary
+                  </span>
+                  <h3 className="font-serif text-xl font-medium text-brand-charcoal">
+                    Columbia Asia Hospital
+                  </h3>
+                  <p className="text-xs text-brand-purple font-medium">
+                    Yeshwanthpur, Bengaluru
+                  </p>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed pt-1">
+                    Consultant in Obstetrics &amp; Gynaecology. State-of-the-art apex hospital infrastructure for high-risk maternal vigilance and complex operative care.
+                  </p>
+                </div>
+                <div className="text-[11px] text-brand-pink-dark font-medium pt-2 border-t border-brand-pink-border/50">
+                  Consultant &amp; Inpatient Privileges
+                </div>
+              </div>
+
             </div>
           </section>
 
@@ -481,13 +793,13 @@ export default function AboutPage() {
                   </a>
 
                   <a
-                    href="mailto:umasheshgiri.c@gmail.com"
+                    href="mailto:umasheshgiri@gmail.com"
                     className="p-3 rounded-2xl bg-brand-canvas border border-brand-pink-border hover:border-brand-purple transition-all flex items-center gap-3"
                   >
                     <Mail className="h-4 w-4 text-brand-pink-dark shrink-0" />
                     <div>
                       <span className="text-[10px] text-brand-muted uppercase block">Direct Email</span>
-                      <span className="text-xs font-semibold text-brand-charcoal">umasheshgiri.c</span>
+                      <span className="text-xs font-semibold text-brand-charcoal">umasheshgiri@gmail.com</span>
                     </div>
                   </a>
                 </div>

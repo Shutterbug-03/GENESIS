@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | VCUS Genesis",
   },
   description:
-    "Gynecology and obstetrics with humanized care, guiding you through every stage of life. 40+ years of clinical expertise by Dr. Uma Sheshgiri in New BEL Road, Bengaluru.",
+    "Gynecology and obstetrics with humanized care, guiding you through every stage of life. 45+ years of clinical expertise by Dr. Uma Sheshgiri (MBBS, DGO, MD, Chairman IMA-AMS) in New BEL Road, Bengaluru.",
   keywords: [
     "best gynecologist Bengaluru",
     "gynecologist New BEL Road",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VCUS Genesis | Warmth, Safety and Expertise in Women's Care",
     description:
-      "40+ years of continuous clinical expertise in obstetrics, gynecology, and fertility care by Dr. Uma Sheshgiri in Bengaluru.",
+      "45+ years of continuous clinical expertise in obstetrics, gynecology, and fertility care by Dr. Uma Sheshgiri in Bengaluru.",
     images: ["/images/genesis_distinction_sanctuary.jpg"],
   },
   robots: {

@@ -21,7 +21,7 @@ export function IconStrip() {
     {
       icon: Stethoscope,
       title: "Expertise with a human touch",
-      description: "Four decades of medical excellence",
+      description: "Over 45 years of clinical excellence",
     },
   ]
 

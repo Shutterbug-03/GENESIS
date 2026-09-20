@@ -46,10 +46,10 @@ export interface BlogPost {
 
 export const DR_UMA_AUTHOR: BlogAuthor = {
   name: "Dr. Uma Sheshgiri",
-  title: "Senior Gynecologist, Obstetrician & Infertility Specialist",
-  qualifications: "MBBS, MD (OBG - Bangalore Medical College), DGO, Fellow in ART (Kiel University, Germany)",
+  title: "Senior Obstetrician & Gynaecologist • Chairman, IMA-AMS Bangalore Chapter",
+  qualifications: "MBBS, DGO, MD (OBG - Bangalore Medical College), Certified Diploma in ART (Germany)",
   avatar: "/images/dr_uma_square.jpg",
-  experience: "Over 40 years of continuous clinical practice in Bengaluru",
+  experience: "Over 45 years of clinical experience, including 15 years Karnataka Government healthcare service",
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -313,7 +313,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: "Where do deliveries and surgeries take place?",
-        answer: "Dr. Uma Sheshgiri conducts all outpatient consultations, scans, and antenatal clinics at the boutique VCUS Genesis sanctuary on New BEL Road. For labor, delivery, and inpatient surgical procedures, she personally admits and delivers patients at premier tertiary partner hospitals equipped with Level-3 NICUs.",
+        answer: "Dr. Uma Sheshgiri conducts all outpatient consultations, scans, and antenatal clinics at the boutique VCUS Genesis sanctuary on New BEL Road. For labor, delivery, and inpatient surgical procedures, she personally admits and delivers patients at premier partner hospitals equipped with Level-3 NICUs, including Cloudnine Hospital Malleswaram, Milan Hospital Kumara Park West, and Columbia Asia Hospital Yeshwanthpur.",
       },
       {
         question: "Can my husband or birth partner accompany me during consultations and labor?",
@@ -331,7 +331,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Fertility Support: What a Level-One Evaluation Truly Covers",
     subtitle: "An evidence-based, compassionate overview of the initial steps for couples trying to conceive — ovulation tracking, hormonal harmony, and timely ART guidance.",
     metaTitle: "Fertility Evaluation & Specialist Bengaluru | Level 1 ART",
-    metaDescription: "Compassionate level-one fertility evaluation in Bengaluru with Dr. Uma Sheshgiri (Kiel University Fellow). Ovulation tracking, semen analysis, and counseling.",
+    metaDescription: "Compassionate level-one fertility evaluation in Bengaluru with Dr. Uma Sheshgiri (Certified Diploma in ART Germany). Ovulation tracking, semen analysis, and counseling.",
     tag: "Fertility",
     category: "Fertility",
     readTime: "6 min read",
@@ -388,7 +388,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Gentle Interventions: Follicular Study & Induction",
         content: [
           "Many couples do not need invasive, expensive IVF. Often, gentle oral ovulation induction (using Letrozole or Clomiphene) combined with ultrasound follicular monitoring to accurately time natural intimacy or Intrauterine Insemination (IUI) yields joyful success.",
-          "With training in Artificial Reproductive Techniques from Kiel University, Germany, Dr. Uma Sheshgiri blends cutting-edge European protocols with conservative, patient-sparing clinical ethics.",
+          "With Certified Diploma training in Artificial Reproductive Techniques from Germany, Dr. Uma Sheshgiri blends cutting-edge European protocols with conservative, patient-sparing clinical ethics.",
         ],
       },
       {

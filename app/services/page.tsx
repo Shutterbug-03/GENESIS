@@ -52,7 +52,7 @@ export default function ServicesPage() {
       items: [
         "Antenatal check-ups and fetal growth monitoring",
         "High-risk pregnancy care: pre-eclampsia, gestational diabetes",
-        "Labor support, cesarean section and VBAC",
+        "Labor support, physiological delivery, cesarean section & VBAC at partner hospitals (Cloudnine, Columbia Asia, Milan)",
         "Postnatal recovery and lactation guidance",
       ],
       footerPill: "TRIMESTER-TO-TRIMESTER CONTINUITY",
@@ -63,13 +63,13 @@ export default function ServicesPage() {
       title: "FERTILITY SUPPORT",
       subheading: "Fertility & infertility care",
       intro:
-        "Level-one evaluation and counseling for couples trying to conceive, informed by Dr. Sheshgiri's training in Artificial Reproductive Techniques at Kiel University, Frankfurt.",
+        "Level-one evaluation and counseling for couples trying to conceive, informed by Dr. Sheshgiri's Certified Diploma in Artificial Reproductive Techniques (ART) from Germany (2015).",
       items: [
         "Level-one infertility evaluation for couples",
         "Ovulation tracking and fertility counseling",
         "Guided referral pathway for advanced ART where needed",
       ],
-      footerPill: "KIEL UNIVERSITY TRAINED PROTOCOL",
+      footerPill: "GERMANY CERTIFIED ART PROTOCOL",
     },
     {
       id: "04",
@@ -271,7 +271,7 @@ export default function ServicesPage() {
 
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2">
                   <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-brand-pink-border shadow-2xs">
-                    <p className="font-serif text-2xl sm:text-3xl font-medium text-brand-purple">40+ Yrs</p>
+                    <p className="font-serif text-2xl sm:text-3xl font-medium text-brand-purple">45+ Yrs</p>
                     <p className="text-[10px] sm:text-xs text-brand-muted mt-1 uppercase tracking-wider">
                       Continuous Medical Authority
                     </p>

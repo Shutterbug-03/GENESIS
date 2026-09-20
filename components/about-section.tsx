@@ -37,7 +37,7 @@ export function AboutSection() {
             <div className="pt-2 grid grid-cols-2 gap-3 sm:gap-6 border-t border-brand-pink-border/30">
               <div className="group p-3 sm:p-4 rounded-2xl transition-all duration-300 hover:bg-white/80 hover:shadow-xs cursor-default">
                 <p className="font-serif text-2xl sm:text-4xl font-medium text-brand-purple group-hover:text-brand-purple-dark group-hover:scale-105 origin-left inline-block transition-all duration-300">
-                  40+
+                  45+
                 </p>
                 <p className="text-[11px] sm:text-xs text-brand-muted mt-1 uppercase tracking-wider group-hover:text-brand-charcoal transition-colors duration-200">
                   Years Clinical Trust

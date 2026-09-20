@@ -80,7 +80,7 @@ export default function BlogPage() {
                     Curated by Dr. Uma Sheshgiri
                   </p>
                   <p className="text-[11px] text-white/70">
-                    MD, DGO • 40+ Years Clinical Continuity
+                    MBBS, DGO, MD (OBG) • 45+ Years Clinical Continuity
                   </p>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export default function BlogPage() {
                 </Button>
 
                 <a
-                  href="mailto:umasheshgiri.c@gmail.com?subject=Topic%20Suggestion%20for%20VCUS%20Genesis"
+                  href="mailto:umasheshgiri@gmail.com?subject=Topic%20Suggestion%20for%20VCUS%20Genesis"
                   className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs sm:text-sm font-medium text-white hover:bg-white/20 transition-all"
                 >
                   <MessageSquare className="h-4 w-4" />

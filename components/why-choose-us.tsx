@@ -8,7 +8,7 @@ export function WhyChooseUs() {
     "Active, individualized listening",
     "A warm, thoughtfully designed medical sanctuary",
     "Support through every stage of a woman's life",
-    "40+ years of continuous clinical practice",
+    "45+ years of continuous clinical practice & medical leadership",
   ]
 
   return (
