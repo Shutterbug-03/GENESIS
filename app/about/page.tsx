@@ -18,7 +18,6 @@ import {
   ArrowUpRight,
   Building2,
   ShieldCheck,
-  Stethoscope,
   Users2,
   Quote,
 } from "lucide-react"

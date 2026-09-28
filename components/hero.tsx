@@ -4,7 +4,6 @@ import * as React from "react"
 import Image from "next/image"
 import { Phone, ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
-import { Button } from "@/components/ui/button"
 
 interface HeroProps {
   onOpenBooking: () => void
