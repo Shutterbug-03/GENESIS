@@ -592,6 +592,113 @@ export const BLOG_POSTS: BlogPost[] = [
       "choosing-womens-clinic-bengaluru",
     ],
   },
+  {
+    slug: "cosmetic-gynaecology-procedures-bangalore-guide",
+    title: "Cosmetic Gynaecology in Bangalore: A Clinical Guide to Procedures, Safety, and Hospital Standards",
+    subtitle:
+      "An evidence-based overview of advanced intimate wellness treatments — vaginal rejuvenation, tightening, labiaplasty, and PRP therapy — performed in a safe, hospital-based setting.",
+    metaTitle: "Cosmetic Gynaecology Bangalore | Procedures, Safety & Hospital Setting",
+    metaDescription:
+      "Comprehensive clinical guide to cosmetic gynaecology treatments in Bangalore by Dr. Uma Sheshgiri. Explore vaginal rejuvenation, tightening, labiaplasty, and PRP intimate wellness.",
+    tag: "Cosmetic Gynaecology",
+    category: "Specialized Procedures",
+    readTime: "7 min read",
+    publishedAt: "2026-03-28",
+    updatedAt: "2026-03-28",
+    image: "/images/genesis_distinction_sanctuary.jpg",
+    imageAlt: "Private clinical consultation suite at Genesis Bangalore",
+    summary:
+      "Cosmetic gynaecology bridges intimate health, postpartum restoration, and surgical precision. In Bangalore, our hospital offers tailored treatments in an unhurried, confidential hospital-based setting under Dr. Uma Sheshgiri.",
+    author: DR_UMA_AUTHOR,
+    keyTakeaways: [
+      "Cosmetic gynaecology addresses functional concerns (urinary leakage, tissue dryness, postpartum laxity) as well as aesthetic harmony.",
+      "Procedures range from completely non-surgical regenerative therapies (PRP) to minimally invasive office treatments and surgical precision.",
+      "Hospital-based surgical environments provide sterile safety, advanced monitoring, and complication prevention that standalone beauty clinics cannot match.",
+      "Strict confidentiality and dedicated 30-minute doctor consultations ensure patient comfort, dignity, and personalized treatment planning.",
+    ],
+    tableOfContents: [
+      { id: "defining-cosmetic-gyn", title: "1. What Is Modern Cosmetic Gynaecology?" },
+      { id: "common-procedures", title: "2. The 7 Clinical Procedures Explained" },
+      { id: "hospital-safety", title: "3. The Importance of a Hospital-Based Setting" },
+      { id: "recovery-guidance", title: "4. Recovery Timelines & What to Expect" },
+      { id: "booking-confidential", title: "5. Scheduling a Private Consultation" },
+    ],
+    sections: [
+      {
+        id: "defining-cosmetic-gyn",
+        heading: "1. What Is Modern Cosmetic Gynaecology? Healing Functional Anatomy",
+        content: [
+          "Cosmetic gynaecology is frequently misunderstood as purely aesthetic. In clinical practice, the overwhelming majority of women seeking intimate care do so for functional relief: pain or discomfort during intercourse, involuntary urine leakage when coughing or exercising (stress urinary incontinence), post-delivery tissue stretching, or chronic dryness caused by hormonal transitions.",
+          "By applying advanced surgical techniques, minimally invasive energy modalities, and autologous cellular therapies, cosmetic gynaecology restores tissue tone, anatomical comfort, and personal confidence across different life stages.",
+        ],
+      },
+      {
+        id: "common-procedures",
+        heading: "2. The 7 Common Procedures Offered at VCUS Genesis Bangalore",
+        content: [
+          "Our hospital provides tailored intimate treatments designed around your specific physiological requirements:",
+          "• Vaginal Rejuvenation: Non-surgical treatments to improve vaginal tone, hydration, and overall tissue comfort without prolonged downtime.",
+          "• Vaginal Tightening: Minimally invasive procedures designed to restore firmness and improve functional pelvic floor support.",
+          "• Labiaplasty: A surgical procedure to reshape or reduce enlarged or asymmetric labia for physical comfort during clothing/sports and aesthetic balance.",
+          "• Post Delivery Vaginal Restoration: Comprehensive treatments aimed at restoring intimate health, elasticity, and pelvic comfort following childbirth.",
+          "• Treatment for Vaginal Dryness: Advanced therapies to stimulate natural lubrication and reduce chronic irritation, burning, or discomfort.",
+          "• Stress Urinary Incontinence Treatment: Non-surgical options to manage mild urine leakage by strengthening supportive urethral tissues without invasive surgery.",
+          "• PRP Therapy for Intimate Wellness: Autologous Platelet-Rich Plasma therapy using your own body's concentrated growth factors to enhance micro-vascularity, tissue health, and intimate sensitivity.",
+        ],
+      },
+      {
+        id: "hospital-safety",
+        heading: "3. Why a Hospital-Based Setting Is Essential for Intimate Procedures",
+        content: [
+          "Intimate gynaecological procedures require the highest standard of asepsis, calibrated anesthesia, and immediate access to tertiary medical facilities. Commercial spas or non-medical salons lack the emergency resuscitation infrastructure, sterile laminar airflow, and microbiological oversight required for surgical and mucosal interventions.",
+          "At VCUS Genesis, every procedure is performed in an accredited hospital-based clinical setting. Dr. Uma Sheshgiri (45+ years clinical experience, Retired Superintendent of K.R. Puram General Hospital) oversees all evaluations, ensuring conservative medical ethics, patient safety, and genuine clinical indications.",
+        ],
+      },
+      {
+        id: "recovery-guidance",
+        heading: "4. Recovery Timelines & What to Expect",
+        content: [
+          "Non-surgical treatments such as PRP therapy and topical regenerative sessions typically involve zero downtime, allowing women to return to desk work and daily routines on the same day.",
+          "Minimally invasive and surgical procedures such as labiaplasty require a short healing period of 3 to 7 days of restful activity, with complete mucosal healing occurring over 4 to 6 weeks. Detailed post-operative instructions, antiseptic care, and direct telephone access to the clinical desk are provided to every patient.",
+        ],
+      },
+      {
+        id: "booking-confidential",
+        heading: "5. Private, Discreet Consultations in North Bengaluru",
+        content: [
+          "We understand that discussing intimate health concerns requires exceptional sensitivity. Consultations at our New BEL Road clinic take place in private, sound-insulated suites where questions are answered thoroughly and without judgment.",
+          "Whether you are exploring options for postpartum recovery, dryness relief, or anatomical balance, we welcome you to schedule a confidential discussion with Dr. Uma Sheshgiri.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How do I know if I am a candidate for cosmetic gynaecology?",
+        answer:
+          "Candidates include women experiencing physical discomfort during exercise or clothing, postpartum laxity, involuntary urine leakage, hormonal dryness, or distress related to labial asymmetry. A thorough clinical evaluation determines whether non-surgical or surgical pathways are appropriate.",
+      },
+      {
+        question: "Is PRP therapy safe for intimate wellness?",
+        answer:
+          "Yes. Because PRP uses concentrated platelets separated from your own blood, there is zero risk of allergic rejection, transmissible infections, or foreign body reaction.",
+      },
+      {
+        question: "How is confidentiality maintained during appointments?",
+        answer:
+          "All visits are conducted in one-on-one private consultation rooms with Dr. Uma Sheshgiri. Your identity, clinical notes, and treatment choices are strictly protected under medical ethics.",
+      },
+      {
+        question: "Where is the clinic located in Bengaluru?",
+        answer:
+          "VCUS Genesis is located on New BEL Road in RMV 2nd Stage, Bangalore (560094), readily accessible from Sadashivanagar, Mathikere, Sanjaynagar, Malleshwaram, and Hebbal.",
+      },
+    ],
+    relatedSlugs: [
+      "first-gynecology-consultation-guide",
+      "full-cycle-maternity-care-bengaluru",
+      "choosing-womens-clinic-bengaluru",
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

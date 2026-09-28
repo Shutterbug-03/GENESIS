@@ -142,13 +142,16 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
                 <span>+91 99000 98736</span>
               </a>
 
-              {/* Consultation CTA Button - visible on tablet and desktop, hidden on narrow mobile to give logo full width */}
-              <Button
+              {/* Consultation CTA Button - Button-in-Button kinetic pill */}
+              <button
                 onClick={onOpenBooking}
-                className="hidden sm:inline-flex rounded-full text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 bg-white text-[#250629] hover:bg-[#FDF2F8] shadow-sm hover:shadow-[0_0_22px_rgba(255,255,255,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 cursor-pointer shrink-0"
+                className="group hidden sm:inline-flex items-center gap-2 pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-[13px] font-semibold bg-white text-[#250629] hover:bg-[#FDF2F8] shadow-sm hover:shadow-[0_0_24px_rgba(255,255,255,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer shrink-0"
               >
                 <span>Book a Consultation</span>
-              </Button>
+                <span className="btn-nested-icon bg-[#250629] text-white">
+                  <ArrowRight className="h-3 w-3" />
+                </span>
+              </button>
 
               {/* Mobile Menu Trigger (min 44px tap target) */}
               <button
@@ -216,11 +219,11 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
               <div className="mt-3.5 pt-3 border-t border-white/10 space-y-2 text-[11px] text-[#FAD6E7]/85 font-light">
                 <div className="flex items-start gap-2">
                   <MapPin className="h-3.5 w-3.5 text-brand-pink shrink-0 mt-0.5" />
-                  <span className="leading-tight">3rd Floor, SL Complex, New BEL Road, Bengaluru – 560094</span>
+                  <span className="leading-tight">3rd Floor, SL Complex, New BEL Road, Bengaluru 560094</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-3.5 w-3.5 text-brand-pink shrink-0" />
-                  <span>Mon – Sat: 10:00 AM – 1:30 PM &bull; 5:00 PM – 8:00 PM</span>
+                  <span>Mon to Sat: 10:00 AM to 1:30 PM, 5:00 PM to 8:00 PM</span>
                 </div>
               </div>
 

@@ -1,120 +1,144 @@
-# Implementation Plan: VCUS Genesis Landing Page (Next.js + Tailwind CSS + shadcn/ui)
+# Implementation Plan: World-Class Frontend & Motion Redesign (Taste-Skill)
 
-Set up a high-performance, best-in-class Next.js (App Router, TypeScript) frontend codebase styled with Tailwind CSS and shadcn/ui, meticulously replicating the refined, humanized aesthetic of the **Nascere** obstetric/gynecology design reference.
+Transform the Genesis landing page into an Awwwards-tier, editorial luxury clinical healthcare experience powered by the newly installed `taste-skill` and `high-end-visual-design` systems.
+
+## Design Read & Dials
+
+> **Design Read**: Reading this as a high-end women's healthcare and clinical obstetrics & gynecology sanctuary landing page for expectant mothers, women, and families seeking compassionate, senior clinical care, with an **editorial luxury and ethereal clinical calm** language, leaning toward **Tailwind v4 + Motion spring physics + nested double-bezel architecture**.
+
+* **`DESIGN_VARIANCE: 7`** - Asymmetrical bento grid, editorial split typography, dual-arched image showcase, avoiding repetitive 3-column identical cards.
+* **`MOTION_INTENSITY: 6`** - Fluid Motion (`motion/react`) spring physics, nested button-in-button interactive kinetics, gentle scroll reveal fades (`whileInView`), smooth floating navigation transitions, reduced-motion compliance.
+* **`VISUAL_DENSITY: 4`** - Luxurious medical sanctuary breathing room (`py-20` to `py-28`), unhurried typography, double-bezel hardware-level card framing, generous spatial hierarchy.
 
 ---
 
 ## User Review Required
 
 > [!IMPORTANT]
-> **Aesthetic & Brand Palette Alignment**
-> The design will mirror the provided Nascere reference:
-> - **Primary Brand Tone**: Warm organic eucalyptus / sage green (`#4A6B5D`, `#3D594D`), soft powder mist blue (`#DCE7E7`, `#C7D8D8`), warm cream/sand background (`#FAF8F5`), and warm charcoal text (`#1F2923`).
-> - **Typography**: Editorial Serif (`Playfair Display` or `Cormorant Garamond`) paired with modern legible sans (`Plus Jakarta Sans`).
-> - **Layout & Visual Architecture**: Arch/pill photo frames, circular icon badges, split dual-panel specialist feature, rounded card matrices, dark sage feature banner, and clean editorial testimonials.
-
-> [!NOTE]
-> **Interactivity & Functionality**
-> In addition to direct `tel:+919900098736` links, clicking "Book a Consultation" will trigger an interactive **Consultation Booking Modal / Sheet** with options to:
-> 1. Instantly Call (`+91 99000 98736`) or open WhatsApp.
-> 2. Submit a Quick Appointment / Callback Request (Name, Phone, Service, Preferred Time) with client-side validation and toast confirmation.
-
----
-
-## Proposed Architecture & Structure
-
-```
-/Users/dharanshsingh/GENESIS
-├── app/
-│   ├── layout.tsx               # Root layout, Google Fonts (Cormorant Garamond & Plus Jakarta Sans), SEO meta
-│   ├── page.tsx                 # Main landing page assembling all sections
-│   └── globals.css              # Custom Tailwind variables, smooth scrolling, editorial styles
-├── components/
-│   ├── ui/                      # shadcn/ui primitives (button, dialog, card, badge, sheet, input, etc.)
-│   ├── navbar.tsx               # Sticky header with logo wordmark, nav links, and CTA
-│   ├── hero.tsx                 # Hero section with eyebrow, serif headline, subhead, CTA, and arched visual
-│   ├── icon-strip.tsx           # 4-item circular icon strip (Warmth, Care, Safety, Expertise)
-│   ├── about-section.tsx        # "More than a clinic" editorial section with dual pill images
-│   ├── split-specialist.tsx     # Split story panel + Dr. Uma Sheshgiri profile card & care tags
-│   ├── services-grid.tsx        # 6 services cards with visual and micro-interactions
-│   ├── why-choose-us.tsx        # Deep sage green highlight section with check points & imagery
-│   ├── testimonials.tsx         # Patient experiences with quote cards and avatar badges
-│   ├── final-cta.tsx            # Dramatic organic dark sage CTA banner with quick booking
-│   ├── booking-modal.tsx        # Interactive Consultation / Callback modal with WhatsApp & direct call
-│   └── footer.tsx               # Contact details, address, hours, and legal links
-├── lib/
-│   └── utils.ts                 # shadcn clsx/tailwind-merge helper
-├── public/
-│   └── images/                  # High-resolution clinic, doctor, and maternity imagery assets
-├── tailwind.config.ts           # Custom colors (sage, mist, cream, sand), borders, typography
-├── components.json              # shadcn/ui configuration
-└── package.json                 # Next.js 14/15, Tailwind CSS, Lucide icons, Framer Motion
-```
+> **Strict Anti-Slop & Taste-Skill Guardrails Enforced:**
+> 1. **Zero Em-Dashes (`—` or `–`)**: Strict enforcement of Section 9.G. All em-dashes and en-dashes across headlines, copy, badges, and metadata will be replaced with natural punctuation (commas, colons, or clean phrasing).
+> 2. **No Image Pill Overlays / Decoration Badges**: Clean up artificial badge stickers overlaid directly on photos.
+> 3. **Eyebrow Restraint**: Maximum 1 eyebrow per 3 sections (max 3 across the entire landing page).
+> 4. **Double-Bezel Card Architecture**: Machined nested containers (outer subtle ring/shell + concentric inner core) for clinical sanctuary depth.
+> 5. **Button-in-Button CTA Kinetics**: Interactive pill buttons with nested trailing icon circles that translate diagonally on hover.
+> 6. **Cohesive Canvas Palette**: Harmonize the landing page flow using Genesis's signature deep plum (`#240A28`, `#331137`), warm rose gold/pink accents (`#C26E92`), and soft luminous canvas (`#FAF6F9`), removing harsh banded gradient dividers.
 
 ---
 
 ## Proposed Changes
 
-### Phase 1: Project Scaffolding & Dependencies
-- Initialize Next.js 14/15 with TypeScript, Tailwind CSS, ESLint, and App Router.
-- Configure `shadcn/ui` foundation (Radix primitives, Lucide React, class-variance-authority, clsx, tailwind-merge).
-- Add `framer-motion` for smooth reveal micro-animations.
+### 1. Motion & Animation Foundation
 
-### Phase 2: Design System & Color Tokens
-- Configure `tailwind.config.ts` and `app/globals.css` with exact brand tokens:
-  - Cream/Sand base: `bg-[#FAF8F5]` / `bg-[#F5F2EB]`
-  - Sage green accent: `brand-sage` (`#4A6B5D`), `brand-sage-dark` (`#364F44`), `brand-sage-light` (`#6B8F80`)
-  - Mist Blue accent: `brand-mist` (`#DCE7E7`), `brand-mist-subtle` (`#EAF1F1`)
-  - Warm Charcoal: `brand-charcoal` (`#1F2923`), `brand-muted` (`#5E6D64`)
-- Set up Google Fonts: `Playfair Display` / `Cormorant Garamond` for headings and `Plus Jakarta Sans` for body copy.
+#### [NEW] [motion-wrapper.tsx](file:///Users/dharanshsingh/GENESIS/components/ui/motion-wrapper.tsx)
+- Reusable, lightweight client islands for GPU-safe scroll reveals (`FadeIn`, `StaggerContainer`, `MagneticPill`, `DoubleBezelCard`).
+- Respects `prefers-reduced-motion` automatically via `useReducedMotion()`.
+- Standardizes spring physics: `{ type: "spring", stiffness: 100, damping: 20 }` and custom ease `[0.16, 1, 0.3, 1]`.
 
-### Phase 3: High-Fidelity Component Implementation (Nascere Alignment)
-1. **Header & Navigation ([navbar.tsx](file:///Users/dharanshsingh/GENESIS/components/navbar.tsx))**:
-   - Wordmark: "VCUS Genesis", subtitle: "GYNECOLOGY & OBSTETRICS".
-   - Links: About, Dr. Uma Sheshgiri, Services, Why Us, Testimonials.
-   - Quick "Book a Consultation" pill button + mobile toggle menu.
-2. **Hero Section ([hero.tsx](file:///Users/dharanshsingh/GENESIS/components/hero.tsx))**:
-   - Eyebrow: "Women's care built on"
-   - Headline: *warmth*, *safety* and *expertise*.
-   - Subhead: Gynecology and obstetrics with humanized care...
-   - Direct Call button with phone icon + phone number (`+91 99000 98736`).
-   - Arched pill photo showcase matching Nascere's dual doctor / caring aesthetic.
-3. **Icon Strip ([icon-strip.tsx](file:///Users/dharanshsingh/GENESIS/components/icon-strip.tsx))**:
-   - 4 circular badge items with warm icons:
-     1. Warmth in every detail
-     2. Care through every stage
-     3. Safety that builds trust
-     4. Expertise with a human touch
-4. **About Section ([about-section.tsx](file:///Users/dharanshsingh/GENESIS/components/about-section.tsx))**:
-   - "More than a clinic — a space built for women's care"
-   - Humanized care narrative with dual arch/pill visuals.
-5. **Split Section — How It Began & Dr. Uma Sheshgiri ([split-specialist.tsx](file:///Users/dharanshsingh/GENESIS/components/split-specialist.tsx))**:
-   - Left: Soft powder mist blue card with story of Dr. Uma Sheshgiri's four decades of dedication and "Book a Consultation" button.
-   - Right: Specialist profile card for Dr. Uma Sheshgiri (MD, DGO) with 40+ years experience, credential badges, and the 6 areas of care tags.
-6. **Services Section ([services-grid.tsx](file:///Users/dharanshsingh/GENESIS/components/services-grid.tsx))**:
-   - Left visual: Clinical care photo with arch shape.
-   - Right grid: 6 rounded cards for Gynecology Consultations, Humanized Antenatal Care, In-house Diagnostics, Fertility Planning, Delivery & Postnatal Support, and Preventive Screenings.
-7. **Why Choose Genesis? ([why-choose-us.tsx](file:///Users/dharanshsingh/GENESIS/components/why-choose-us.tsx))**:
-   - Deep sage green full-width section with 5 checklist items and organic pill photo insets.
-8. **Testimonials ([testimonials.tsx](file:///Users/dharanshsingh/GENESIS/components/testimonials.tsx))**:
-   - Elegant patient feedback quotes (Ananya S., Priya M., Kavya R.) with patient portrait badges.
-9. **Final CTA & Booking Modal ([final-cta.tsx](file:///Users/dharanshsingh/GENESIS/components/final-cta.tsx) & [booking-modal.tsx](file:///Users/dharanshsingh/GENESIS/components/booking-modal.tsx))**:
-   - High-impact section with deep sage background and quick consultation booking.
-   - Fully working modal with click-to-call, WhatsApp chat, and callback request form.
-10. **Footer ([footer.tsx](file:///Users/dharanshsingh/GENESIS/components/footer.tsx))**:
-    - Bengaluru address (3rd Floor, SL Complex, Amarajyoti Layout, New BEL Road, Bengaluru – 560094), phone, email (`umasheshgiri.c@gmail.com`), and copyright.
+---
+
+### 2. Navigation & Header
+
+#### [MODIFY] [navbar.tsx](file:///Users/dharanshsingh/GENESIS/components/navbar.tsx)
+- Upgrade floating glass pill navbar into an ethereal floating island with subtle inner border highlight (`shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]`).
+- Replace `window.addEventListener('scroll')` state churn with throttled, smooth scroll physics.
+- Add fluid hamburger morph into an 'X' and full-screen glass overlay with staggered navigation links.
+- Button-in-button treatment for the "Book Consultation" nav action.
+
+---
+
+### 3. Hero Section
+
+#### [MODIFY] [hero.tsx](file:///Users/dharanshsingh/GENESIS/components/hero.tsx)
+- Clean up text stack to strict 4-element limit: Eyebrow badge, Headline (max 2 lines), Subtext (under 20 words), Dual CTAs with Button-in-Button interactive arrow.
+- Apply double-bezel concentric frame to the primary care team photograph.
+- Smooth staggered entrance animation for headline, metric pill, and visual anchor.
+- Descender clearance and zero em-dashes.
+
+---
+
+### 4. Icon & Value Strip
+
+#### [MODIFY] [icon-strip.tsx](file:///Users/dharanshsingh/GENESIS/components/icon-strip.tsx)
+- Upgrade icon cards with double-bezel architecture, delicate Phosphor/line icons, and subtle hover elevation.
+- Fluid staggered scroll reveal with unhurried typography.
+
+---
+
+### 5. About & Clinical Story
+
+#### [MODIFY] [about-section.tsx](file:///Users/dharanshsingh/GENESIS/components/about-section.tsx)
+- Replace all em-dashes with graceful prose.
+- Dual-arched photography gallery with subtle parallax scale on hover and refined double-bezel metric cards.
+- Restrain eyebrow usage to maintain the 1-per-3 section ratio.
+
+---
+
+### 6. Specialist Profile & Genesis Origins
+
+#### [MODIFY] [split-specialist.tsx](file:///Users/dharanshsingh/GENESIS/components/split-specialist.tsx)
+- Asymmetrical split layout with double-bezel nested story card and Dr. Uma Sheshgiri clinical credentials.
+- Refined button-in-button consultation action with magnetic micro-physics.
+
+---
+
+### 7. Services Bento & Care Pathways
+
+#### [MODIFY] [services-grid.tsx](file:///Users/dharanshsingh/GENESIS/components/services-grid.tsx)
+- Transform from basic 6-box grid into an asymmetrical bento grid with visual variety (feature card + interactive pathway cards).
+- Remove AI-slop numbered tags ("01", "02") and replace with genuine clinical context.
+- Double-bezel concentric cards with inner light borders and diagonal trailing icon hover effects.
+
+---
+
+### 8. Sanctuary Distinction ("Why Choose Us")
+
+#### [MODIFY] [why-choose-us.tsx](file:///Users/dharanshsingh/GENESIS/components/why-choose-us.tsx)
+- Deep plum sanctuary canvas (`#331137`) with refined layered photography.
+- Remove image pill overlays (`Maternity Care`) to respect taste-skill Section 9.F.
+- Double-bezel architectural frame for the newborn & mother photograph.
+
+---
+
+### 9. Testimonials & Social Proof
+
+#### [MODIFY] [testimonials.tsx](file:///Users/dharanshsingh/GENESIS/components/testimonials.tsx)
+- Fluid staggered testimonial cards with verified patient photography.
+- Strict 3-line quote rule and zero em-dashes in attributions.
+- Concentric double-bezel avatars with subtle glowing hover ring.
+
+---
+
+### 10. Final Call to Action & Footer
+
+#### [MODIFY] [final-cta.tsx](file:///Users/dharanshsingh/GENESIS/components/final-cta.tsx)
+- Magnetic button-in-button primary CTA ("Book Consultation" with nested right-arrow pill).
+- Warm sanctuary background with ambient radial glow.
+
+#### [MODIFY] [footer.tsx](file:///Users/dharanshsingh/GENESIS/components/footer.tsx)
+- Remove all en-dashes (`–`) and em-dashes (`—`) in address, descriptions, and metadata.
+- Clean typography and micro-interactions on contact links.
+
+---
+
+### 11. Page Shell & Styling
+
+#### [MODIFY] [app/page.tsx](file:///Users/dharanshsingh/GENESIS/app/page.tsx)
+- Unify canvas transitions: replace multiple harsh 16px striped gradient bridges with seamless, elegant atmospheric transitions.
+
+#### [MODIFY] [app/globals.css](file:///Users/dharanshsingh/GENESIS/app/globals.css)
+- Add double-bezel utilities, custom spring cubic-beziers, and liquid glass approximation tokens.
 
 ---
 
 ## Verification Plan
 
-### Automated Checks
-- `npm run build` to verify strict TypeScript typing, Tailwind compilation, and zero ESLint errors.
-- Check responsive viewport scaling and accessibility tags.
+### Automated Tests
+- Run `npm run build` to verify Next.js 16 + React 19 compilation, TypeScript types, and SSG generation.
+- Run `npm run lint` to ensure ESLint passes cleanly.
 
-### Visual & Interactive Verification
-- Start local development server with `npm run dev`.
-- Verify the layout against the Nascere screenshot reference:
-  - Color harmony, arch shapes, card borders, typography hierarchy.
-  - Test the "Book a Consultation" button to confirm modal popup and direct calling functionality.
-  - Test mobile responsiveness (hamburger menu, stacked cards, touch targets).
+### Manual / Browser Verification
+- Verify 60fps smooth animations and transitions on scroll and hover.
+- Check responsive collapse on mobile (<768px): single column, no horizontal overflow, no touch target collisions.
+- Check Reduced Motion: ensure animations degrade gracefully to instant states when `prefers-reduced-motion: reduce` is enabled.
+- Audit for ZERO em-dashes (`—` or `–`) across all text strings.
+- Audit contrast ratios (WCAG AA min 4.5:1).

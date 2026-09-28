@@ -1,47 +1,69 @@
 "use client"
 
 import * as React from "react"
-import { CalendarCheck, Phone, Heart } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { motion, useReducedMotion } from "motion/react"
+import { CalendarCheck, Phone, ArrowUpRight } from "@phosphor-icons/react"
 
 interface FinalCtaProps {
   onOpenBooking: () => void
 }
 
 export function FinalCta({ onOpenBooking }: FinalCtaProps) {
-  return (
-    <section className="py-12 lg:py-16 bg-[#331137] text-white relative overflow-hidden">
-      {/* Minimalist Radiant Ambient Glow (matching Why Choose Us) */}
-      <div className="absolute top-0 right-1/4 -z-0 h-[450px] w-[450px] rounded-full bg-brand-pink-dark/20 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 -z-0 h-[350px] w-[350px] rounded-full bg-brand-purple-medium/30 blur-3xl pointer-events-none" />
+  const reduce = useReducedMotion()
 
-      {/* Heart Contour Outline in background */}
-      <div className="absolute -bottom-16 -right-16 sm:right-10 pointer-events-none opacity-20">
-        <svg
-          width="340"
-          height="340"
-          viewBox="0 0 24 24"
+  return (
+    <section className="py-16 lg:py-24 bg-[#331137] text-white relative overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute top-0 right-1/4 h-[480px] w-[480px] rounded-full bg-brand-pink-dark/18 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 h-[360px] w-[360px] rounded-full bg-brand-purple-medium/28 blur-3xl pointer-events-none" />
+
+      {/* Decorative background heart */}
+      <div
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[18%] pointer-events-none select-none"
+        aria-hidden="true"
+      >
+        <motion.svg
+          viewBox="0 0 600 540"
+          className="w-[360px] sm:w-[500px] lg:w-[640px] xl:w-[750px]"
+          style={{ opacity: 0.07 }}
+          initial={reduce ? false : { opacity: 0, scale: 0.88 }}
+          whileInView={{ opacity: 0.07, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
           fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-brand-pink-light"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-        </svg>
+          <path
+            d="M300 510 C300 510 30 360 30 180 C30 90 105 30 180 30 C225 30 270 55 300 90 C330 55 375 30 420 30 C495 30 570 90 570 180 C570 360 300 510 300 510Z"
+            fill="url(#ctaHeartGrad)"
+          />
+          <path
+            d="M300 510 C300 510 30 360 30 180 C30 90 105 30 180 30 C225 30 270 55 300 90 C330 55 375 30 420 30 C495 30 570 90 570 180 C570 360 300 510 300 510Z"
+            stroke="#FAD6E7"
+            strokeWidth="3"
+            strokeOpacity="0.4"
+            fill="none"
+          />
+          <defs>
+            <radialGradient id="ctaHeartGrad" cx="50%" cy="38%" r="58%">
+              <stop offset="0%" stopColor="#FDF0F7" />
+              <stop offset="60%" stopColor="#E5A5C2" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="#C26E92" stopOpacity="0.15" />
+            </radialGradient>
+          </defs>
+        </motion.svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-2xl space-y-6 sm:space-y-8">
-          
-          <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase text-brand-pink-light">
-              <Heart className="h-3.5 w-3.5 fill-brand-pink-light/50" />
-              <span>Genesis Women&apos;s Care</span>
-            </div>
-
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.12]">
+        <motion.div
+          className="max-w-2xl space-y-7 sm:space-y-9"
+          initial={reduce ? false : { opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="space-y-4">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.1]">
               Your health deserves{" "}
               <span className="italic font-light text-brand-pink-light">
                 warm, expert care.
@@ -49,43 +71,44 @@ export function FinalCta({ onOpenBooking }: FinalCtaProps) {
             </h2>
           </div>
 
-          <p className="text-base sm:text-lg text-white/90 font-light leading-relaxed max-w-xl">
-            We&apos;re ready to support you with attention, listening and safety at
-            every stage of your journey.
+          <p className="text-base sm:text-lg text-white/88 font-light leading-relaxed max-w-xl">
+            We&apos;re ready to support you with attention, listening and safety at every stage of your journey.
           </p>
 
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-            <Button
+          {/* CTAs: Button-in-Button */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <button
               onClick={onOpenBooking}
-              size="lg"
-              className="w-full sm:w-auto rounded-full bg-white text-brand-purple hover:bg-brand-pink-subtle hover:text-brand-purple-dark px-7 py-3.5 text-sm sm:text-base font-semibold shadow-lg hover:shadow-[0_12px_35px_rgba(236,197,214,0.55)] hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
+              className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-full bg-white text-brand-purple px-6 py-3.5 text-sm sm:text-base font-semibold shadow-[0_12px_30px_rgba(250,214,231,0.35)] hover:shadow-[0_16px_40px_rgba(250,214,231,0.55)] hover:-translate-y-0.5 hover:bg-brand-pink-subtle active:translate-y-0 active:scale-[0.98] transition-all duration-300 cursor-pointer"
             >
-              <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
+              <CalendarCheck size={17} />
               <span>Book a Consultation</span>
-            </Button>
+              <span className="btn-nested-icon bg-brand-purple/10 group-hover:bg-brand-purple/15">
+                <ArrowUpRight size={12} />
+              </span>
+            </button>
 
             <a
               href="tel:+919900098736"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-6 py-3.5 text-xs sm:text-sm font-medium text-white hover:bg-white/20 hover:border-white/45 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] active:translate-y-0 transition-all duration-300 shadow-xs"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/28 bg-white/10 hover:bg-white/18 hover:border-white/42 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 backdrop-blur-md px-6 py-3.5 text-sm font-medium text-white transition-all duration-300"
             >
-              <Phone className="h-4 w-4 text-[#FAD6E7] group-hover:scale-110 transition-transform duration-300" />
+              <Phone size={15} className="text-[#FAD6E7] shrink-0" />
               <span>Call +91 99000 98736</span>
             </a>
           </div>
 
-          <div className="pt-3 text-[11px] sm:text-xs text-white/80 flex flex-wrap items-center gap-2 sm:gap-3">
-            <span className="px-3 py-1 rounded-full bg-white/[0.08] border border-white/15 hover:bg-white/[0.14] hover:text-white transition-all duration-200 cursor-default">
-              ✓ Direct Doctor Access
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white/[0.08] border border-white/15 hover:bg-white/[0.14] hover:text-white transition-all duration-200 cursor-default">
-              ✓ Dedicated Antenatal Slots
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white/[0.08] border border-white/15 hover:bg-white/[0.14] hover:text-white transition-all duration-200 cursor-default">
-              ✓ Private Sanctuary Suites
-            </span>
+          {/* Trust signals */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-white/78">
+            {["Direct Doctor Access", "Dedicated Antenatal Slots", "Private Sanctuary Suites"].map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-full bg-white/[0.08] border border-white/14 hover:bg-white/[0.13] hover:text-white transition-all duration-200 cursor-default"
+              >
+                &#10003; {tag}
+              </span>
+            ))}
           </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -206,9 +206,20 @@ export function BookingModal({ open, onOpenChange, initialService }: BookingModa
                     <option>Gynecology Care</option>
                     <option>Obstetrics &amp; Maternity</option>
                     <option>Fertility Support</option>
+                    <option>Cosmetic Gynaecology</option>
+                    <option>Vaginal Rejuvenation</option>
+                    <option>Vaginal Tightening</option>
+                    <option>Labiaplasty</option>
+                    <option>Post Delivery Vaginal Restoration</option>
+                    <option>Treatment for Vaginal Dryness</option>
+                    <option>Stress Urinary Incontinence Treatment</option>
+                    <option>PRP Therapy for Intimate Wellness</option>
                     <option>Preventive Screening</option>
                     <option>Menopause &amp; Midlife</option>
                     <option>Diagnostics &amp; Labs</option>
+                    {!["Gynecology Care", "Obstetrics & Maternity", "Fertility Support", "Cosmetic Gynaecology", "Vaginal Rejuvenation", "Vaginal Tightening", "Labiaplasty", "Post Delivery Vaginal Restoration", "Treatment for Vaginal Dryness", "Stress Urinary Incontinence Treatment", "PRP Therapy for Intimate Wellness", "Preventive Screening", "Menopause & Midlife", "Diagnostics & Labs"].includes(formData.service) && (
+                      <option value={formData.service}>{formData.service}</option>
+                    )}
                   </select>
                 </div>
 

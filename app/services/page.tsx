@@ -11,18 +11,72 @@ import {
   ArrowUpRight,
   ShieldCheck,
   Clock,
-  Sparkles,
+  Award,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ServicesPage() {
   const [bookingOpen, setBookingOpen] = React.useState(false)
   const [selectedService, setSelectedService] = React.useState<string | undefined>()
+  const [openFaq, setOpenFaq] = React.useState<number | null>(0)
 
   const handleInquire = (serviceName: string) => {
     setSelectedService(serviceName)
     setBookingOpen(true)
   }
+
+  const cosmeticProcedures = [
+    {
+      id: "c01",
+      title: "Vaginal Rejuvenation",
+      tag: "Non-Surgical",
+      description:
+        "Non-surgical treatments to improve vaginal tone, hydration and overall comfort.",
+    },
+    {
+      id: "c02",
+      title: "Vaginal Tightening",
+      tag: "Minimally Invasive",
+      description:
+        "Minimally invasive procedures designed to restore firmness and improve functional support.",
+    },
+    {
+      id: "c03",
+      title: "Labiaplasty",
+      tag: "Surgical Procedure",
+      description:
+        "A surgical procedure to reshape or reduce the labia for comfort and aesthetic balance.",
+    },
+    {
+      id: "c04",
+      title: "Post Delivery Vaginal Restoration",
+      tag: "Postpartum Care",
+      description:
+        "Treatments aimed at restoring intimate health after childbirth.",
+    },
+    {
+      id: "c05",
+      title: "Treatment for Vaginal Dryness",
+      tag: "Advanced Therapy",
+      description:
+        "Advanced therapies to improve lubrication and reduce irritation or discomfort.",
+    },
+    {
+      id: "c06",
+      title: "Stress Urinary Incontinence Treatment (Non-surgical options)",
+      tag: "Non-Surgical Option",
+      description:
+        "Helps manage mild urine leakage without surgery.",
+    },
+    {
+      id: "c07",
+      title: "PRP Therapy for Intimate Wellness",
+      tag: "Regenerative Medicine",
+      description:
+        "Uses the body’s own healing properties to enhance tissue health and sensitivity.",
+    },
+  ]
 
   const pathways = [
     {
@@ -129,7 +183,7 @@ export default function ServicesPage() {
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-semibold uppercase tracking-[0.22em] text-[#FAD6E7] mb-5">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FAD6E7] animate-pulse" />
-              Care Pathways &amp; Clinical Offerings
+              Care Pathways &amp; Clinical Offerings • Bangalore
             </div>
 
             <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal tracking-tight mb-5">
@@ -137,24 +191,31 @@ export default function ServicesPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto font-light leading-relaxed">
-              Genesis brings gynecology, obstetrics, fertility support and preventive
-              care into one continuous relationship — so your history doesn&apos;t reset
-              every time you walk in.
+              Genesis brings gynecology, obstetrics, fertility support, advanced cosmetic
+              gynaecology and preventive care into one continuous relationship — so your history
+              doesn&apos;t reset every time you walk in.
             </p>
 
             {/* Quick Filter Badges — frosted glass */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
                 <Clock className="h-3.5 w-3.5 text-[#FAD6E7]" />
                 Unhurried Consultations
               </span>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
+              <a
+                href="#cosmetic-gynaecology"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-sm text-xs text-[#FCE1EE] font-medium transition-all"
+              >
                 <ShieldCheck className="h-3.5 w-3.5 text-[#FAD6E7]" />
-                Evidence-Guided Protocol
+                Cosmetic Gynaecology
+              </a>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
+                <ShieldCheck className="h-3.5 w-3.5 text-[#FAD6E7]" />
+                Hospital-Based Setting
               </span>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
-                <Sparkles className="h-3.5 w-3.5 text-[#FAD6E7]" />
-                In-House Labs &amp; Ultrasound
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs text-white font-medium">
+                <Award className="h-3.5 w-3.5 text-[#FAD6E7]" />
+                Evidence-Guided Protocol
               </span>
             </div>
           </div>
@@ -196,7 +257,114 @@ export default function ServicesPage() {
             </div>
           </section>
 
-          {/* 6 Pathways Grid (from screen copy.png) */}
+          {/* ── Cosmetic Gynaecology Procedures Offered (Professional Clinical List) ── */}
+          <section id="cosmetic-gynaecology" className="scroll-mt-24 rounded-3xl sm:rounded-4xl bg-white border border-brand-pink-border p-6 sm:p-10 lg:p-12 shadow-xs">
+            {/* Section Header */}
+            <div className="max-w-3xl space-y-3 pb-8 sm:pb-10 border-b border-brand-pink-border/60">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF0F5] border border-brand-pink-border text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-purple">
+                Hospital Clinical Offerings • Bangalore
+              </div>
+
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-brand-charcoal leading-tight">
+                Cosmetic Gynaecology Procedures Offered
+              </h2>
+
+              <p className="text-sm sm:text-base lg:text-lg text-brand-muted font-light leading-relaxed pt-1">
+                Our hospital offers a range of advanced cosmetic gynaecology treatments in Bangalore, tailored to individual needs and performed in a safe, hospital-based setting. Common procedures include:
+              </p>
+
+              {/* Clinical Assurances */}
+              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-brand-muted">
+                <span className="inline-flex items-center gap-1.5 font-medium text-brand-charcoal">
+                  <ShieldCheck className="h-4 w-4 text-brand-pink-dark" />
+                  Safe hospital-based setting
+                </span>
+                <span className="text-brand-pink-border">•</span>
+                <span className="inline-flex items-center gap-1.5 font-medium text-brand-charcoal">
+                  <Clock className="h-4 w-4 text-brand-pink-dark" />
+                  Tailored to individual needs
+                </span>
+                <span className="text-brand-pink-border">•</span>
+                <span className="inline-flex items-center gap-1.5 font-medium text-brand-charcoal">
+                  <Award className="h-4 w-4 text-brand-pink-dark" />
+                  Led by Dr. Uma Sheshgiri
+                </span>
+              </div>
+            </div>
+
+            {/* Professional Procedure List */}
+            <div className="divide-y divide-brand-pink-border/50 pt-2">
+              {cosmeticProcedures.map((proc, index) => (
+                <div
+                  key={proc.id}
+                  className="py-5 sm:py-6 first:pt-4 last:pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 group hover:bg-[#FAF6F9]/60 px-3 sm:px-5 -mx-3 sm:-mx-5 rounded-2xl transition-colors duration-150"
+                >
+                  <div className="flex items-start gap-4 sm:gap-5 max-w-3xl">
+                    <span className="font-mono text-xs sm:text-sm font-semibold text-brand-pink-dark bg-brand-pink-light/30 px-2.5 py-1 rounded-md shrink-0 mt-0.5 select-none">
+                      0{index + 1}
+                    </span>
+                    <div className="space-y-1">
+                      <div className="flex flex-wrap items-center gap-2.5">
+                        <h3 className="font-serif text-xl sm:text-2xl font-medium text-brand-charcoal group-hover:text-brand-purple transition-colors">
+                          {proc.title}
+                        </h3>
+                        <span className="text-[11px] font-medium text-brand-purple bg-[#FAF0F5] px-2.5 py-0.5 rounded-full border border-brand-pink-border/60">
+                          {proc.tag}
+                        </span>
+                      </div>
+                      <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
+                        {proc.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="shrink-0 flex items-center md:self-center pl-10 md:pl-0">
+                    <button
+                      onClick={() => handleInquire(proc.title)}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-brand-purple/20 bg-white hover:bg-brand-purple hover:text-white text-brand-purple text-xs font-semibold shadow-2xs hover:shadow-xs transition-all duration-200 cursor-pointer"
+                      aria-label={`Inquire about ${proc.title}`}
+                    >
+                      <span>Inquire</span>
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Confidential Consultation Footer Banner */}
+            <div className="mt-8 pt-6 border-t border-brand-pink-border/60 flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-[#FAF5F8] p-6 sm:p-8 rounded-2xl border border-brand-pink-border/60">
+              <div className="space-y-1.5 max-w-2xl">
+                <div className="text-xs font-semibold uppercase tracking-wider text-brand-purple">
+                  Private &amp; Confidential Consultation
+                </div>
+                <h4 className="font-serif text-lg sm:text-xl text-brand-charcoal font-medium">
+                  Discuss your health and intimate wellness in complete privacy
+                </h4>
+                <p className="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                  All cosmetic gynaecology consultations and treatments are performed with strict clinical confidentiality in our hospital-based surgical and outpatient suites with Dr. Uma Sheshgiri.
+                </p>
+              </div>
+
+              <div className="shrink-0 flex flex-wrap items-center gap-3">
+                <Button
+                  onClick={() => handleInquire("Cosmetic Gynaecology")}
+                  className="bg-brand-purple hover:bg-brand-purple-dark text-white text-xs px-5 py-2.5 rounded-full font-semibold shadow-xs cursor-pointer transition-all"
+                >
+                  Book Confidential Consultation
+                </Button>
+                <a
+                  href="tel:+918023607777"
+                  className="inline-flex items-center gap-2 text-xs font-medium text-brand-charcoal hover:text-brand-purple px-4 py-2.5 rounded-full border border-brand-pink-border bg-white transition-colors"
+                >
+                  <Phone className="h-3.5 w-3.5 text-brand-pink-dark" />
+                  <span>Call Hospital: +91 80 2360 7777</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Care Pathways */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {pathways.map((item) => (
               <div
@@ -298,6 +466,70 @@ export default function ServicesPage() {
                 </div>
               </div>
 
+            </div>
+          </section>
+
+          {/* ── Clinical FAQs for Patients & Answer Engines (AEO) ── */}
+          <section id="faqs" className="rounded-3xl sm:rounded-4xl bg-white border border-brand-pink-border p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="max-w-3xl space-y-3 mb-8">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-purple">
+                Clinical FAQs &amp; Patient Guidance
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-brand-charcoal leading-snug">
+                Common questions about cosmetic gynaecology &amp; specialized women&apos;s care in Bangalore
+              </h2>
+              <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
+                Clear, transparent medical guidance on safety, procedures, hospital standards, and confidential consultations.
+              </p>
+            </div>
+
+            <div className="divide-y divide-brand-pink-border/50">
+              {[
+                {
+                  q: "What cosmetic gynaecology procedures are available at VCUS Genesis Bangalore?",
+                  a: "Our hospital provides advanced functional and aesthetic cosmetic gynaecology treatments tailored to each patient: non-surgical Vaginal Rejuvenation, minimally invasive Vaginal Tightening, Labiaplasty for comfort and balance, Post Delivery Vaginal Restoration, advanced treatments for Vaginal Dryness, non-surgical Stress Urinary Incontinence treatment, and autologous PRP Therapy for intimate wellness.",
+                },
+                {
+                  q: "Are all cosmetic gynaecology procedures performed in a safe, hospital-based setting?",
+                  a: "Yes. All treatments and surgical procedures are conducted strictly within a safe, sterile hospital-based setting. Patients receive complete pre-procedure medical evaluations by Dr. Uma Sheshgiri, hospital-grade sterilization protocols, and comprehensive follow-up care.",
+                },
+                {
+                  q: "How does non-surgical vaginal rejuvenation and tightening work?",
+                  a: "Non-surgical treatments utilize advanced tissue-restorative techniques and regenerative protocols to stimulate natural collagen remodeling, improve hydration, restore tissue elasticity, and support the pelvic floor without major incisions or prolonged downtime.",
+                },
+                {
+                  q: "What is PRP therapy for intimate wellness and how does it help?",
+                  a: "Platelet-Rich Plasma (PRP) therapy isolates healing growth factors from your own blood. When applied to intimate tissues, it naturally promotes vascularization, stimulates healthy tissue regeneration, improves lubrication, and enhances intimate sensitivity safely and naturally.",
+                },
+                {
+                  q: "How is patient confidentiality protected during consultation and treatment?",
+                  a: "Confidentiality is paramount in cosmetic and intimate health. Every appointment is conducted in a private, unhurried one-on-one session with Dr. Uma Sheshgiri. Your medical history, procedure discussions, and identity are guarded under strict medical ethics.",
+                },
+                {
+                  q: "Which areas of Bengaluru does the clinic serve, and how do I schedule an appointment?",
+                  a: "We are located on New BEL Road in RMV 2nd Stage (PIN 560094), serving patients from Sadashivanagar, Sanjaynagar, Mathikere, Yeshwanthpur, Malleshwaram, Hebbal, RT Nagar, Dollars Colony, and Yelahanka. You can schedule a private visit online or call +91 99000 98736 directly.",
+                },
+              ].map((faq, idx) => (
+                <div key={idx} className="py-4 sm:py-5">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full flex items-center justify-between text-left gap-4 group cursor-pointer"
+                    aria-expanded={openFaq === idx}
+                  >
+                    <span className="font-serif text-base sm:text-lg text-brand-charcoal group-hover:text-brand-purple transition-colors font-medium">
+                      {faq.q}
+                    </span>
+                    <span className={`shrink-0 h-7 w-7 rounded-full bg-[#FAF0F5] border border-brand-pink-border flex items-center justify-center text-brand-purple transition-transform duration-200 ${openFaq === idx ? "rotate-180 bg-brand-purple text-white" : ""}`}>
+                      <ChevronDown className="h-4 w-4" />
+                    </span>
+                  </button>
+                  {openFaq === idx && (
+                    <div className="pt-3 pr-8 text-xs sm:text-sm text-brand-muted font-light leading-relaxed animate-in fade-in duration-200">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </section>
 
