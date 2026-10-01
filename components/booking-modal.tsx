@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Phone, MessageCircle, CheckCircle2, Clock, User, Heart } from "lucide-react"
+import { Phone, MessageCircle, CheckCircle2, Clock, User, Heart, Loader2, AlertCircle } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -19,11 +19,13 @@ interface BookingModalProps {
 
 export function BookingModal({ open, onOpenChange, initialService }: BookingModalProps) {
   const [submitted, setSubmitted] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
+  const [errorMessage, setErrorMessage] = React.useState<string | null>(null)
   const [formData, setFormData] = React.useState({
     name: "",
     phone: "",
     service: initialService || "Gynecology Care",
-    preferredTime: "Morning (10 AM - 1:30 PM)",
+    preferredTime: "Morning (10:00 AM - 1:30 PM)",
     notes: "",
   })
 
@@ -35,18 +37,44 @@ export function BookingModal({ open, onOpenChange, initialService }: BookingModa
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setErrorMessage(null)
+
+    try {
+      const res = await fetch("/api/consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error || "Unable to send your request. Please call our clinic directly.")
+      }
+
+      setSubmitted(true)
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please call +91 99000 98736 directly."
+      setErrorMessage(msg)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const resetForm = () => {
     setSubmitted(false)
+    setLoading(false)
+    setErrorMessage(null)
     setFormData({
       name: "",
       phone: "",
       service: initialService || "Gynecology Care",
-      preferredTime: "Morning (10 AM - 1:30 PM)",
+      preferredTime: "Morning (10:00 AM - 1:30 PM)",
       notes: "",
     })
   }
@@ -242,11 +270,41 @@ export function BookingModal({ open, onOpenChange, initialService }: BookingModa
                 </div>
               </div>
 
+              {errorMessage && (
+                <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-xs text-red-800 flex items-start gap-2.5">
+                  <AlertCircle className="h-4 w-4 text-red-600 shrink-0 mt-0.5" />
+                  <div className="space-y-1">
+                    <p>{errorMessage}</p>
+                    <div className="flex items-center gap-3 pt-1">
+                      <a href="tel:+919900098736" className="font-semibold text-brand-purple underline">
+                        Call +91 99000 98736
+                      </a>
+                      <a
+                        href="https://wa.me/919900098736"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-[#128C7E] underline"
+                      >
+                        WhatsApp Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <Button
                 type="submit"
-                className="w-full mt-2 rounded-full bg-brand-purple py-3 text-sm font-medium text-white hover:bg-brand-purple-dark shadow-sm hover:shadow-[0_0_25px_rgba(194,110,146,0.35)] transition-all"
+                disabled={loading}
+                className="w-full mt-2 rounded-full bg-brand-purple py-3 text-sm font-medium text-white hover:bg-brand-purple-dark shadow-sm hover:shadow-[0_0_25px_rgba(194,110,146,0.35)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Request Consultation Confirmation
+                {loading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span>Connecting to Care Sanctuary...</span>
+                  </>
+                ) : (
+                  <span>Request Consultation Confirmation</span>
+                )}
               </Button>
 
               <p className="text-center text-[11px] text-brand-muted">
